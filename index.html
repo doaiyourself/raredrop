@@ -39,6 +39,22 @@
              background-size: cover;
              background-position: center 30%;
         }
+        /* Ensure aspect ratio works with Tailwind JIT */
+        .aspect-w-1 { --tw-aspect-w: 1; }
+        .aspect-h-1 { --tw-aspect-h: 1; }
+        .aspect-h-1 {
+            position: relative;
+            padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+        }
+        .aspect-h-1 > * {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
     </style>
 </head>
 
@@ -112,7 +128,7 @@
                     <!-- Product Card 1: dirtea -->
                     <div class="group fade-in-section">
                         <div class="aspect-w-1 aspect-h-1 bg-gray-100 rounded-lg overflow-hidden">
-                            <img src="https://www.dirteaworld.com/cdn/shop/files/CoffeeV4FOP_drink.jpg" alt="dirtea product image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x600/e2e8f0/94a3b8?text=dirtea';">
+                            <img src="https://www.dirteaworld.com/cdn/shop/files/CoffeeV4FOP_drink.jpg" alt="dirtea product image" class="object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x600/e2e8f0/94a3b8?text=dirtea';">
                         </div>
                         <h4 class="mt-4 font-bold text-lg tracking-wide">dirtea</h4>
                         <p class="text-sm text-gray-500">alternative coffee | your self-care routine, in a cup.</p>
@@ -120,7 +136,7 @@
                     <!-- Product Card 2: williamson tea -->
                     <div class="group fade-in-section" style="transition-delay: 150ms;">
                         <div class="aspect-w-1 aspect-h-1 bg-gray-100 rounded-lg overflow-hidden">
-                            <img src="https://www.williamsonfineteas.com/wp-content/uploads/2024/09/240821_WilliamsonTea_Earl-Grey-Gift-Biscuit-Set_401-759x1024.jpg" alt="williamson tea product image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x600/e2e8f0/94a3b8?text=williamson+tea';">
+                            <img src="https://www.williamsonfineteas.com/wp-content/uploads/2024/09/240821_WilliamsonTea_Earl-Grey-Gift-Biscuit-Set_401-759x1024.jpg" alt="williamson tea product image" class="object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x600/e2e8f0/94a3b8?text=williamson+tea';">
                         </div>
                         <h4 class="mt-4 font-bold text-lg tracking-wide">williamson tea</h4>
                         <p class="text-sm text-gray-500">specialty tea | a conscientious tea of heritage & value.</p>
@@ -128,7 +144,7 @@
                     <!-- Product Card 3: arteao -->
                     <div class="group fade-in-section" style="transition-delay: 300ms;">
                         <div class="aspect-w-1 aspect-h-1 bg-gray-100 rounded-lg overflow-hidden">
-                            <img src="https://arteao.com/cdn/shop/products/butterfly-pea-flower-blue-matcha-latte-steamed-milk_e5b8f47f-bb45-44d6-a76f-8543f80e6317.jpg" alt="arteao product image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x600/e2e8f0/94a3b8?text=arteao';">
+                            <img src="https://arteao.com/cdn/shop/products/butterfly-pea-flower-blue-matcha-latte-steamed-milk_e5b8f47f-bb45-44d6-a76f-8543f80e6317.jpg" alt="arteao product image" class="object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x600/e2e8f0/94a3b8?text=arteao';">
                         </div>
                         <h4 class="mt-4 font-bold text-lg tracking-wide">arteao</h4>
                         <p class="text-sm text-gray-500">blue matcha | an artistic cup with water-soluble tech.</p>
@@ -136,7 +152,7 @@
                     <!-- Product Card 4: kyoto beer -->
                     <div class="group fade-in-section" style="transition-delay: 450ms;">
                         <div class="aspect-w-1 aspect-h-1 bg-gray-100 rounded-lg overflow-hidden">
-                            <img src="https://kizakura-brewery.com/img/brand_bnr2.jpg" alt="kyoto beer product image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x600/e2e8f0/94a3b8?text=kyoto+beer';">
+                            <img src="https://kizakura-brewery.com/img/brand_bnr2.jpg" alt="kyoto beer product image" class="object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x600/e2e8f0/94a3b8?text=kyoto+beer';">
                         </div>
                         <h4 class="mt-4 font-bold text-lg tracking-wide">kyoto beer</h4>
                         <p class="text-sm text-gray-500">craft beverage | delicate flavor from sake artisans.</p>
@@ -169,7 +185,7 @@
                     </div>
                     <div class="fade-in-section" style="transition-delay: 300ms;">
                         <div class="flex items-center justify-center h-16 w-16 mx-auto mb-6 bg-gray-200 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962c.57-1.023.57-2.206 0-3.228m-5.344 0c-.297.53-.45 1.13-.45 1.76 0 .63.153 1.23.45 1.76m3.59-3.228a9.094 9.094 0 00-3.742-.479 3 3 0 004.682 2.72M9.309 18.72a9.094 9.094 0 01-3.742-.479 3 3 0 014.682 2.72m7.5-2.962c-.57-1.023-.57-2.206 0-3.228m5.344 0c.297.53.45 1.13.45 1.76 0 .63-.153 1.23-.45 1.76m-3.59 3.228a9.094 9.094 0 013.742.479 3 3 0 01-4.682-2.72M12 12.75a3 3 0 100-6 3 3 0 000 6z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962c.57-1.023.57-2.206 0-3.228m-5.344 0c-.297.53-.45 1.13-.45 1.76 0 .63.153 1.23.45 1.76m3.59-3.228a9.094 9.094 0 00-3.742-.479 3 3 0 004.682 2.72M9.309 18.72a9.094 9.094 0 01-3.742-.479 3 3 0 014.682 2.72m7.5-2.962c-.57-1.023-.57-2.206 0-3.228m5.344 0c.297.53.45 1.13.45 1.76 0 .63-.153 1.23.45 1.76m-3.59 3.228a9.094 9.094 0 013.742-.479 3 3 0 01-4.682-2.72M12 12.75a3 3 0 100-6 3 3 0 000 6z" /></svg>
                         </div>
                         <h4 class="font-bold text-xl mb-2 uppercase tracking-widest">Partnership</h4>
                         <p class="text-gray-600">We believe in growing together. We create an ecosystem where our brands, our customers, and we all thrive.</p>
